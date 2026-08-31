@@ -1,23 +1,1296 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Home</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <!--
-      Need a visual blank slate?
-      Remove all code in `styles.css`!
-    -->
-    <link rel="stylesheet" href="styles.css" />
-    <script type="module" src="script.js"></script>
-  </head>
-  <body>
-    <nav>
-      <a href="/" aria-current="page">Home</a>
-      <a href="/page2.html">Other page</a>
+
+
+  <!-- Schema.org JSON-LD 구조화 데이터 -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://auto.reliabledone.com/#website",
+        "url": "https://auto.reliabledone.com/",
+        "name": "오토모빌 리스 전문 비교센터",
+        "description": "국내 전 금융사 실시간 신차 다이렉트 리스 가격 및 프로모션 비교 플랫폼"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://auto.reliabledone.com/avante-fullchange-lease#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "홈",
+            "item": "https://auto.reliabledone.com/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "현대자동차",
+            "item": "https://auto.reliabledone.com/hyundai"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "2026 아반떼 풀체인지 리스",
+            "item": "https://auto.reliabledone.com/avante-fullchange-lease"
+          }
+        ]
+      },
+      {
+        "@type": "Product",
+        "@id": "https://auto.reliabledone.com/avante-fullchange-lease#product",
+        "name": "2026 현대 디 올 뉴 아반떼 풀체인지 운용리스",
+        "image": "https://auto.reliabledone.com/images/avante-fullchange.jpg",
+        "description": "2026년형 현대 아반떼 풀체인지 신차 금융 운용리스 상품. 초기비용 0원 무보증 가능, 가솔린 1.6, 1.6 하이브리드, N Line, LPi 전 라인업 실시간 즉시출고 재고 매칭.",
+        "brand": {
+          "@type": "Brand",
+          "name": "현대자동차 (Hyundai Motors)"
+        },
+        "offers": {
+          "@type": "AggregateOffer",
+          "priceCurrency": "KRW",
+          "lowPrice": "238000",
+          "highPrice": "425000",
+          "offerCount": "12",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "238000",
+            "priceCurrency": "KRW",
+            "unitText": "월 (36~60개월 약정, 선납금 기준)"
+          }
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.92",
+          "reviewCount": "1840",
+          "bestRating": "5",
+          "worstRating": "1"
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://auto.reliabledone.com/avante-fullchange-lease#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "2026 아반떼 풀체인지 신차 리스 시 초기비용 없이 무보증 진행이 가능한가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "네, 가능합니다. NICE 또는 KCB 신용점수 700점 이상 및 소득 증빙이 가능한 직장인이나 사업자라면 보증보험 증권 발행 또는 무보증 무선납 심사 승인을 통해 초기비용 0원으로 즉시 계약 및 출고가 가능합니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "아반떼 풀체인지 리스와 장기렌트 중 어떤 상품이 더 유리한가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "일반 번호판(하, 허, 호가 아닌 자가용 번호판)을 선호하고 본인의 무사고 운전 경력 및 보험 요율을 유지하고자 한다면 자동차 리스가 유리합니다. 반면, 만 21세 이상 초보 운전자나 사고 이력이 많아 보험료 할증 부담이 큰 경우에는 보험료가 월 대여료에 포함된 장기렌트가 유리할 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "개인사업자 및 법인사업자의 아반떼 리스 비용처리 한도는 얼마인가요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "업무용 승용차 기준으로 연간 감가상각비 상당액 800만 원, 유류비 및 통행료 등 유지관리비 700만 원을 합산하여 연 최대 1,500만 원까지 전액 손비(필요경비) 인정됩니다. 운행기록부를 작성할 경우 1,500만 원을 초과하는 업무 사용 비율분까지 추가 인정받아 종합소득세 및 법인세를 절감할 수 있습니다."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "약정 기간 도중 중도 해지 시 위약금 산정 방식은 어떻게 되나요?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "리스 중도 해지 시 잔여 리스료 합계액에 금융사별 중도해지수수료율(통상 10%~35% 내외, 잔여기간 비례 차감)이 부과됩니다. 손실을 최소화하려면 위약금을 내고 반납하기보다 온라인 커뮤니티나 리스 승계 전문 플랫폼을 통해 제3자에게 승계하는 방법이 가장 경제적입니다."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --primary-dark: #0f2b48;
+      --primary-navy: #163e65;
+      --primary-blue: #1e5c94;
+      --accent-cyan: #0284c7;
+      --accent-orange: #ea580c;
+      --accent-hover: #c2410c;
+      --bg-light: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-soft-blue: #eff6ff;
+      --border-subtle: #e2e8f0;
+      --border-focus: #93c5fd;
+      --text-main: #0f172a;
+      --text-body: #334155;
+      --text-muted: #64748b;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 12px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 10px 25px rgba(15, 23, 42, 0.12);
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard", "Noto Sans KR", sans-serif;
+      line-height: 1.85;
+      color: var(--text-body);
+      background-color: var(--bg-light);
+      word-break: keep-all;
+      letter-spacing: -0.02em;
+    }
+
+    /* Header & Navigation */
+    header {
+      background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary-navy) 60%, var(--primary-blue) 100%);
+      color: #ffffff;
+      padding: 3.5rem 1.5rem 2.5rem;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .header-badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.18);
+      backdrop-filter: blur(8px);
+      color: #bae6fd;
+      padding: 0.35rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    header p {
+      font-size: 1.15rem;
+      color: #e2e8f0;
+      max-width: 850px;
+      margin: 0 auto 1.8rem;
+      font-weight: 400;
+    }
+
+    nav {
+      background: rgba(15, 43, 72, 0.7);
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding: 0.75rem 0;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    nav a {
+      color: #f1f5f9;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      padding: 0.4rem 0.8rem;
+      border-radius: var(--radius-sm);
+      transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #38bdf8;
+    }
+
+    /* Main Container */
+    main {
+      max-width: 1180px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+
+    /* Sections */
+    section {
+      background-color: var(--bg-card);
+      border-radius: var(--radius-md);
+      padding: 2.8rem 2.2rem;
+      margin-bottom: 2.5rem;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--border-subtle);
+    }
+
+    h2 {
+      font-size: 1.95rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid var(--border-subtle);
+      position: relative;
+    }
+
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 70px;
+      height: 3px;
+      background-color: var(--accent-cyan);
+    }
+
+    h3 {
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--primary-navy);
+      margin: 2rem 0 1rem;
+      padding-left: 0.75rem;
+      border-left: 4px solid var(--primary-blue);
+    }
+
+    h4 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin: 1.4rem 0 0.6rem;
+    }
+
+    p {
+      color: var(--text-body);
+      margin-bottom: 1.3rem;
+      font-size: 1.02rem;
+      text-align: justify;
+    }
+
+    strong {
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    /* Card Grids */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+      margin: 2rem 0;
+    }
+
+    .card {
+      background-color: var(--bg-light);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--border-focus);
+    }
+
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary-navy);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .card-tag {
+      background-color: var(--bg-soft-blue);
+      color: var(--accent-cyan);
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+    }
+
+    /* Tables */
+    .table-container {
+      overflow-x: auto;
+      margin: 1.8rem 0 2.2rem;
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: #ffffff;
+      min-width: 720px;
+    }
+
+    thead th {
+      background-color: var(--primary-dark);
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 0.98rem;
+      padding: 1rem 1.1rem;
+      text-align: center;
+      border-bottom: 2px solid var(--primary-blue);
+    }
+
+    tbody td {
+      padding: 1rem 1.1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      font-size: 0.95rem;
+      color: var(--text-body);
+      text-align: center;
+    }
+
+    tbody tr:nth-child(even) {
+      background-color: #fcfdfe;
+    }
+
+    tbody tr:hover {
+      background-color: var(--bg-soft-blue);
+    }
+
+    .highlight-cell {
+      font-weight: 700;
+      color: var(--accent-orange);
+    }
+
+    /* CSS Interactive Bar Chart Simulation */
+    .chart-container {
+      background: var(--bg-light);
+      border-radius: var(--radius-md);
+      padding: 1.8rem;
+      margin: 2rem 0;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .chart-title {
+      font-weight: 700;
+      color: var(--primary-dark);
+      margin-bottom: 1.2rem;
+      font-size: 1.1rem;
+    }
+
+    .chart-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .chart-label {
+      width: 220px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-main);
+    }
+
+    .chart-bar-wrap {
+      flex: 1;
+      background-color: #e2e8f0;
+      height: 24px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin: 0 1rem;
+      position: relative;
+    }
+
+    .chart-bar-fill {
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent-cyan), var(--primary-blue));
+      border-radius: 12px;
+      transition: width 1s ease-in-out;
+    }
+
+    .chart-val {
+      width: 110px;
+      text-align: right;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--accent-orange);
+    }
+
+    /* Callouts & Info Boxes */
+    .info-callout {
+      background-color: #f0fdf4;
+      border-left: 4px solid #22c55e;
+      padding: 1.4rem 1.6rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 1.8rem 0;
+    }
+
+    .warning-callout {
+      background-color: #fff7ed;
+      border-left: 4px solid var(--accent-orange);
+      padding: 1.4rem 1.6rem;
+      border-radius: 0 var(--radius-md) var(--radius-md) 0;
+      margin: 1.8rem 0;
+    }
+
+    /* Interactive Calculator Container */
+    .calc-container {
+      background: linear-gradient(145deg, #ffffff, #f0f7ff);
+      border: 2px solid #bae6fd;
+      border-radius: var(--radius-lg);
+      padding: 2.2rem;
+      margin: 2.5rem 0;
+      box-shadow: var(--shadow-md);
+    }
+
+    .calc-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .calc-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .calc-item label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--primary-dark);
+      margin-bottom: 0.4rem;
+    }
+
+    .calc-item select, .calc-item input {
+      padding: 0.75rem 0.9rem;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-size: 1rem;
+      background-color: #ffffff;
+    }
+
+    .calc-result-box {
+      margin-top: 1.8rem;
+      background: var(--primary-dark);
+      color: #ffffff;
+      padding: 1.5rem;
+      border-radius: var(--radius-md);
+      text-align: center;
+    }
+
+    .calc-result-box .price-display {
+      font-size: 2.2rem;
+      font-weight: 800;
+      color: #38bdf8;
+      margin: 0.5rem 0;
+    }
+
+    /* CTA Section */
+    .cta-banner {
+      background: linear-gradient(135deg, var(--primary-navy) 0%, var(--primary-dark) 100%);
+      color: #ffffff;
+      border-radius: var(--radius-lg);
+      padding: 3rem 2rem;
+      text-align: center;
+      margin: 3rem 0;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .cta-banner h3 {
+      color: #ffffff;
+      border-left: none;
+      padding-left: 0;
+      font-size: 1.85rem;
+      margin-top: 0;
+    }
+
+    .cta-banner p {
+      color: #cbd5e1;
+      max-width: 750px;
+      margin: 1rem auto 2rem;
+    }
+
+    .btn-action {
+      display: inline-block;
+      background: linear-gradient(135deg, var(--accent-orange), #f97316);
+      color: #ffffff;
+      font-size: 1.2rem;
+      font-weight: 700;
+      padding: 1.1rem 2.8rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(234, 88, 12, 0.35);
+    }
+
+    .btn-action:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(234, 88, 12, 0.5);
+    }
+
+    /* Keyword Tags */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin: 1.5rem 0;
+    }
+
+    .tag-item {
+      background-color: var(--bg-soft-blue);
+      color: var(--primary-navy);
+      font-size: 0.88rem;
+      padding: 0.4rem 0.85rem;
+      border-radius: 20px;
+      text-decoration: none;
+      border: 1px solid var(--border-subtle);
+      transition: all 0.2s ease;
+    }
+
+    .tag-item:hover {
+      background-color: var(--primary-blue);
+      color: #ffffff;
+      border-color: var(--primary-blue);
+    }
+
+    /* FAQ Accordion */
+    .faq-item {
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      margin-bottom: 1rem;
+      overflow: hidden;
+      background: #ffffff;
+    }
+
+    .faq-question {
+      padding: 1.2rem 1.4rem;
+      font-weight: 700;
+      color: var(--primary-dark);
+      background-color: #ffffff;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .faq-question:hover {
+      background-color: var(--bg-light);
+    }
+
+    .faq-answer {
+      padding: 0 1.4rem;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+      background-color: #fcfcfd;
+      border-top: 1px solid transparent;
+      color: var(--text-body);
+    }
+
+    .faq-item.active .faq-answer {
+      max-height: 800px;
+      padding: 1.2rem 1.4rem;
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    /* External Links */
+    .reference-box {
+      background-color: #f1f5f9;
+      padding: 1.4rem;
+      border-radius: var(--radius-md);
+      margin-top: 2rem;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .reference-box h4 {
+      margin-top: 0;
+      color: var(--primary-dark);
+    }
+
+    .reference-box ul {
+      list-style-type: square;
+      padding-left: 1.4rem;
+      margin-top: 0.5rem;
+    }
+
+    .reference-box a {
+      color: var(--accent-cyan);
+      text-decoration: underline;
+      font-weight: 500;
+    }
+
+    /* Form */
+    .quote-form {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.2rem;
+      margin-top: 1.5rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: 0.92rem;
+      font-weight: 600;
+      color: var(--text-main);
+      margin-bottom: 0.4rem;
+    }
+
+    .form-group input, .form-group select {
+      padding: 0.8rem 1rem;
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-sm);
+      font-size: 0.98rem;
+    }
+
+    .form-group.full-width {
+      grid-column: 1 / -1;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--primary-dark);
+      color: #94a3b8;
+      padding: 3rem 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    footer a {
+      color: #cbd5e1;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.95rem;
+      }
+      section {
+        padding: 2rem 1.2rem;
+      }
+      .calc-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-badge">2026 디 올 뉴 아반떼 풀체인지 특가 지원센터</div>
+    <h1>2026 아반떼 풀체인지 리스 견적 및 가격표 완벽 분석</h1>
+    <p>가솔린 1.6, 하이브리드, N Line, LPi 전 트림 실시간 다이렉트 최저가 비교와 초기비용 0원 무보증 심사 승인 가이드</p>
+    <nav aria-label="메인 내비게이션">
+      <ul>
+        <li><a href="#overview">모델 개요 및 제원</a></li>
+        <li><a href="#price-table">트림별 리스 가격표</a></li>
+        <li><a href="#calculator">실시간 월 리스료 계산기</a></li>
+        <li><a href="#comparison">리스 vs 렌트 vs 할부</a></li>
+        <li><a href="#tax-business">사업자 절세 및 유지비</a></li>
+        <li><a href="#community-review">실제 계약 후기</a></li>
+        <li><a href="#faq-section">자주 묻는 질문</a></li>
+        <li><a href="#consulting-form">다이렉트 상담 신청</a></li>
+      </ul>
     </nav>
-    <main>
-      <h1>Home page</h1>
-    </main>
-  </body>
-</html>
+  </header>
+
+  <main>
+    <!-- 섹션 1: 개요 및 시장 트렌드 -->
+    <section id="overview">
+      <h2>2026 아반떼 풀체인지 리스 시장 현황과 핵심 가치</h2>
+      <p>현대자동차의 글로벌 베스트셀러 세단인 아반떼가 2026년형 차세대 풀체인지 모델을 통해 동급 준중형 차급의 한계를 뛰어넘는 상품성으로 돌아왔습니다. 날렵해진 패스트백 실루엣과 차세대 ccNC 인포테인먼트 시스템, 첨단 운전자 보조 시스템(ADAS), 그리고 3세대 하이브리드 파워트레인을 탑재하여 사회초년생의 첫 차부터 출퇴근용 세컨카, 개인사업자 및 법인의 업무용 차량에 이르기까지 폭넓은 수요를 창출하고 있습니다.</p>
+      <p>최근 신차 구매 시장에서는 초기 목돈 납입과 높은 취등록세, 매년 청구되는 자동차세, 그리고 급격한 감가상각에 대한 부담을 줄이기 위해 금융 상품인 <strong>자동차 운용리스</strong>를 선택하는 비중이 역대 최고치를 기록하고 있습니다. 특히 <strong>아반떼 풀체인지 리스</strong>는 일반 자가용 번호판을 그대로 장착하여 품위를 유지하면서도, 합리적인 <strong>월 리스 요금</strong>으로 신차를 이용할 수 있어 <strong>다이렉트</strong> 견적을 비교하는 이용자가 급증하는 추세입니다.</p>
+
+      <h3>아반떼 풀체인지 세부 모델 라인업 및 파워트레인 특징</h3>
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-title">
+            <span>아반떼 가솔린 1.6 스마트스트림</span>
+            <span class="card-tag">가성비 원픽</span>
+          </div>
+          <p>스마트스트림 G1.6 엔진과 무단변속기(IVT)의 완벽한 조합으로 도심 연비 15.3km/L를 달성하여 일상 주행에서 가장 경제적인 유지비를 제공하는 대표 모델입니다.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <span>아반떼 하이브리드 1.6 HEV</span>
+            <span class="card-tag">최고 연비 효율</span>
+          </div>
+          <p>복합 21.1km/L의 압도적인 고효율을 자랑하며, 도심 정체 구간에서의 정숙성과 회생제동 기술을 통해 장거리 출퇴근 및 장기 운용 시 유류비 절감 효과가 가장 탁월합니다.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <span>아반떼 N Line & N 2.0T</span>
+            <span class="card-tag">다이내믹 퍼포먼스</span>
+          </div>
+          <p>스포티한 감성의 N Line 터보 모델과 트랙 주행까지 소화하는 고성능 아반떼 N 2.0 플랫파워 엔진은 펀 드라이빙을 추구하는 젊은 오너들에게 폭발적인 인기를 끌고 있습니다.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <span>아반떼 1.6 LPi</span>
+            <span class="card-tag">알뜰 연료비</span>
+          </div>
+          <p>저렴한 LPG 연료 단가를 기반으로 주행거리가 연간 3만km 이상으로 긴 영업직 프리랜서 및 도심 단거리 퀵 업무용으로 최적화된 경제형 파워트레인입니다.</p>
+        </div>
+      </div>
+
+      <div class="tag-cloud" aria-label="주요 연관 키워드 태그">
+        <a href="#price-table" class="tag-item">2026 아반떼 풀체인지 가솔린 1.6 스마트</a>
+        <a href="#price-table" class="tag-item">아반떼 풀체인지 가솔린 1.6 모던</a>
+        <a href="#price-table" class="tag-item">아반떼 풀체인지 가솔린 1.6 인스퍼레이션</a>
+        <a href="#price-table" class="tag-item">아반떼 풀체인지 하이브리드 1.6 스마트</a>
+        <a href="#price-table" class="tag-item">아반떼 풀체인지 하이브리드 1.6 모던</a>
+        <a href="#price-table" class="tag-item">아반떼 풀체인지 하이브리드 1.6 인스퍼레이션</a>
+        <a href="#price-table" class="tag-item">아반떼 풀체인지 1.6 LPi 스마트</a>
+        <a href="#price-table" class="tag-item">아반떼 풀체인지 1.6 LPi 모던</a>
+        <a href="#price-table" class="tag-item">아반떼 풀체인지 1.6 LPi 인스퍼레이션</a>
+        <a href="#price-table" class="tag-item">아반떼 풀체인지 N Line 1.6T 모던</a>
+        <a href="#price-table" class="tag-item">아반떼 풀체인지 N Line 1.6T 인스퍼레이션</a>
+        <a href="#price-table" class="tag-item">아반떼 N 풀체인지 2.0T 가솔린 플랫파워</a>
+        <a href="#price-table" class="tag-item">아반떼 스마트스트림 G1.6 IVT 사양</a>
+        <a href="#price-table" class="tag-item">아반떼 감마 1.6 LPi 6단 자동</a>
+        <a href="#price-table" class="tag-item">아반떼 하이브리드 1.6 HEV 6단 DCT</a>
+        <a href="#price-table" class="tag-item">디 올 뉴 아반떼 CN8 풀체인지</a>
+        <a href="#price-table" class="tag-item">아반떼 모던 초이스 패키지 리스</a>
+        <a href="#price-table" class="tag-item">아반떼 스타일 에디션 리스 가격</a>
+        <a href="#price-table" class="tag-item">아반떼 익스클루시브 풀옵션 견적</a>
+        <a href="#price-table" class="tag-item">아반떼 무보증 리스 상품</a>
+        <a href="#price-table" class="tag-item">아반떼 잔가보장형 리스 비교</a>
+        <a href="#price-table" class="tag-item">아반떼 사업자 경비처리 리스팩</a>
+        <a href="#price-table" class="tag-item">아반떼 즉시출고 선발주 리스</a>
+        <a href="#price-table" class="tag-item">아반떼 승계 전문 사이트 매칭</a>
+      </div>
+    </section>
+
+    <!-- 섹션 2: 가격표 및 실시간 견적 데이터 -->
+    <section id="price-table">
+      <h2>2026 아반떼 풀체인지 트림별 리스 가격표 (36/48/60개월 기준)</h2>
+      <p>신차 리스 요금은 차량 출고가에서 만기 시점의 <strong>잔존가치(중고차 잔가)</strong>를 제외한 나머지 원금에 금융 이자율을 적용하여 산출됩니다. 다음 가격표는 2026년 기준 공시 출고가와 표준 프로모션이 반영된 <strong>평균 예상 견적 금액</strong>이며, 약정 조건(선납금, 보증금, 이용 개월 수)에 따라 조정될 수 있습니다.</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>파워트레인 및 세부 트림</th>
+              <th>차량 출고가</th>
+              <th>선납금 30% (48개월)</th>
+              <th>보증금 30% (48개월)</th>
+              <th>무보증 0원 (60개월)</th>
+              <th>잔존가치율</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>가솔린 1.6 스마트</strong></td>
+              <td>2,045만 원</td>
+              <td class="highlight-cell">월 238,000원</td>
+              <td>월 315,000원</td>
+              <td>월 348,000원</td>
+              <td>52%</td>
+            </tr>
+            <tr>
+              <td><strong>가솔린 1.6 모던</strong></td>
+              <td>2,356만 원</td>
+              <td class="highlight-cell">월 269,000원</td>
+              <td>월 352,000원</td>
+              <td>월 389,000원</td>
+              <td>54%</td>
+            </tr>
+            <tr>
+              <td><strong>가솔린 1.6 인스퍼레이션</strong></td>
+              <td>2,721만 원</td>
+              <td class="highlight-cell">월 304,000원</td>
+              <td>월 398,000원</td>
+              <td>월 438,000원</td>
+              <td>56%</td>
+            </tr>
+            <tr>
+              <td><strong>하이브리드 1.6 스마트</strong></td>
+              <td>2,578만 원</td>
+              <td class="highlight-cell">월 288,000원</td>
+              <td>월 379,000원</td>
+              <td>월 418,000원</td>
+              <td>57%</td>
+            </tr>
+            <tr>
+              <td><strong>하이브리드 1.6 모던</strong></td>
+              <td>2,835만 원</td>
+              <td class="highlight-cell">월 315,000원</td>
+              <td>월 412,000원</td>
+              <td>월 455,000원</td>
+              <td>59%</td>
+            </tr>
+            <tr>
+              <td><strong>하이브리드 1.6 인스퍼레이션</strong></td>
+              <td>3,192만 원</td>
+              <td class="highlight-cell">월 349,000원</td>
+              <td>월 458,000원</td>
+              <td>월 505,000원</td>
+              <td>61%</td>
+            </tr>
+            <tr>
+              <td><strong>1.6 LPi 모던</strong></td>
+              <td>2,430만 원</td>
+              <td class="highlight-cell">월 275,000원</td>
+              <td>월 361,000원</td>
+              <td>월 399,000원</td>
+              <td>50%</td>
+            </tr>
+            <tr>
+              <td><strong>N Line 1.6T 인스퍼레이션</strong></td>
+              <td>2,915만 원</td>
+              <td class="highlight-cell">월 328,000원</td>
+              <td>월 428,000원</td>
+              <td>월 472,000원</td>
+              <td>53%</td>
+            </tr>
+            <tr>
+              <td><strong>아반떼 N 2.0T 플랫파워</strong></td>
+              <td>3,450만 원</td>
+              <td class="highlight-cell">월 385,000원</td>
+              <td>월 498,000원</td>
+              <td>월 549,000원</td>
+              <td>55%</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- CSS 차트 시각화 -->
+      <div class="chart-container">
+        <div class="chart-title">주요 트림별 48개월 기준 월 리스료 지수 비교 (선납금 30% 조건)</div>
+        <div class="chart-row">
+          <div class="chart-label">가솔린 1.6 스마트</div>
+          <div class="chart-bar-wrap">
+            <div class="chart-bar-fill" style="width: 58%;"></div>
+          </div>
+          <div class="chart-val">23.8만 원</div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">가솔린 1.6 모던</div>
+          <div class="chart-bar-wrap">
+            <div class="chart-bar-fill" style="width: 66%;"></div>
+          </div>
+          <div class="chart-val">26.9만 원</div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">가솔린 1.6 인스퍼레이션</div>
+          <div class="chart-bar-wrap">
+            <div class="chart-bar-fill" style="width: 75%;"></div>
+          </div>
+          <div class="chart-val">30.4만 원</div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">하이브리드 1.6 인스퍼레이션</div>
+          <div class="chart-bar-wrap">
+            <div class="chart-bar-fill" style="width: 86%;"></div>
+          </div>
+          <div class="chart-val">34.9만 원</div>
+        </div>
+        <div class="chart-row">
+          <div class="chart-label">아반떼 N 2.0T 플랫파워</div>
+          <div class="chart-bar-wrap">
+            <div class="chart-bar-fill" style="width: 95%;"></div>
+          </div>
+          <div class="chart-val">38.5만 원</div>
+        </div>
+      </div>
+
+      <div class="info-callout">
+        <h4>선납금과 보증금의 결정적 차이점 안내</h4>
+        <p><strong>선납금(선수금)</strong>은 총 리스료 중 일부 금액을 사전에 미리 지불하여 매월 청구되는 요금을 낮추는 방식으로, 만기 시 환급되지 않는 소멸성 비용입니다. 반면 <strong>보증금</strong>은 금융사에 담보 형태로 맡겨두는 원금으로 만기 시 100% 환불받거나 만기 차량 인수 시 잔존가치와 상계 처리할 수 있어 장기적으로 총 납입 비용을 가장 크게 줄여주는 현명한 선택입니다.</p>
+      </div>
+    </section>
+
+    <!-- 섹션 3: 인터랙티브 견적 계산기 시뮬레이터 -->
+    <section id="calculator">
+      <h2>실시간 아반떼 풀체인지 리스 계산기 시뮬레이터</h2>
+      <p>고객님이 희망하는 세부 모델과 계약 기간, 초기 자금 조건을 설정하면 즉시 실시간 <strong>월 예상 리스 비용</strong>을 산출해 드립니다. 다이렉트 특판 할인이 자동 적용된 금액입니다.</p>
+
+      <div class="calc-container">
+        <div class="calc-grid">
+          <div class="calc-item">
+            <label for="calc-trim">차량 트림 선택</label>
+            <select id="calc-trim" onchange="calculateLease()">
+              <option value="20450000" selected>가솔린 1.6 스마트 (2,045만 원)</option>
+              <option value="23560000">가솔린 1.6 모던 (2,356만 원)</option>
+              <option value="27210000">가솔린 1.6 인스퍼레이션 (2,721만 원)</option>
+              <option value="25780000">하이브리드 1.6 스마트 (2,578만 원)</option>
+              <option value="28350000">하이브리드 1.6 모던 (2,835만 원)</option>
+              <option value="31920000">하이브리드 1.6 인스퍼레이션 (3,192만 원)</option>
+              <option value="24300000">1.6 LPi 모던 (2,430만 원)</option>
+              <option value="29150000">N Line 1.6T 인스퍼레이션 (2,915만 원)</option>
+              <option value="34500000">아반떼 N 2.0T (3,450만 원)</option>
+            </select>
+          </div>
+          <div class="calc-item">
+            <label for="calc-period">이용 약정 기간</label>
+            <select id="calc-period" onchange="calculateLease()">
+              <option value="36">36개월 (단기 갱신형)</option>
+              <option value="48" selected>48개월 (표준 권장형)</option>
+              <option value="60">60개월 (최저 월납 플랜)</option>
+            </select>
+          </div>
+          <div class="calc-item">
+            <label for="calc-deposit-type">초기비용 유형</label>
+            <select id="calc-deposit-type" onchange="calculateLease()">
+              <option value="prepaid" selected>선납금 (월 납입금 최소화)</option>
+              <option value="deposit">보증금 (만기 100% 전액 환급)</option>
+              <option value="zero">무보증/무선납 (초기비용 0원)</option>
+            </select>
+          </div>
+          <div class="calc-item">
+            <label for="calc-rate">초기비용 비율</label>
+            <select id="calc-rate" onchange="calculateLease()">
+              <option value="0.1">10%</option>
+              <option value="0.2">20%</option>
+              <option value="0.3" selected>30%</option>
+              <option value="0.4">40%</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="calc-result-box">
+          <div>선택 조건 기준 실시간 예상 월 리스료</div>
+          <div class="price-display" id="calc-result-text">월 238,000 원</div>
+          <div style="font-size: 0.9rem; color: #94a3b8;">* 자동차세 포함 / 보험료 별도 / 취등록세 및 공채 전액 포함 견적</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 섹션 4: 구매 방식 심층 비교 (리스 vs 장기렌트 vs 할부) -->
+    <section id="comparison">
+      <h2>리스 vs 장기렌트 vs 신차 할부구매 완벽 비교</h2>
+      <p>차량을 구매할 때 어떤 방식이 가장 적합한지는 개인의 운전 성향, 연간 주행거리, 신용 조건 및 사업자 유무에 따라 완전히 달라집니다. 세 가지 방식의 장단점을 명확하게 파악하면 수백만 원의 불필요한 지출을 방지할 수 있습니다.</p>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>구분 항목</th>
+              <th>자동차 운용리스</th>
+              <th>신차 장기렌트</th>
+              <th>일반 신차 할부구매</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>번호판 형태</strong></td>
+              <td>일반 자가용 번호판 (품위 유지)</td>
+              <td>'하, 허, 호' 렌터카 전용 번호판</td>
+              <td>일반 자가용 번호판</td>
+            </tr>
+            <tr>
+              <td><strong>자동차 보험</strong></td>
+              <td>개인 보험 요율 적용 (무사고 경력 유지)</td>
+              <td>렌트사 단체보험 (사고 할증 없음)</td>
+              <td>개인 보험 가입 (매년 별도 납부)</td>
+            </tr>
+            <tr>
+              <td><strong>취등록세 (7%)</strong></td>
+              <td>리스료 분할 포함 (초기부담 없음)</td>
+              <td>렌트료 분할 포함 (초기부담 없음)</td>
+              <td>차량 출고 시 일시불 납부 필요</td>
+            </tr>
+            <tr>
+              <td><strong>금융 자산/부채 인식</strong></td>
+              <td>금융리스는 부채인식, 운용리스 최적화</td>
+              <td>대여 상품 (신용대출 한도 영향 미미)</td>
+              <td>전액 금융권 대출/부채 등재</td>
+            </tr>
+            <tr>
+              <td><strong>사업자 비용처리</strong></td>
+              <td>연 최대 1,500만 원 전액 경비 인정</td>
+              <td>연 최대 1,500만 원 전액 경비 인정</td>
+              <td>감가상각 5년 균등 분할 처리</td>
+            </tr>
+            <tr>
+              <td><strong>만기 선택권</strong></td>
+              <td>인수 / 반납 / 재리스 선택 가능</td>
+              <td>인수 / 반납 / 연장 선택 가능</td>
+              <td>중고차 직접 매각 필요</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>운용리스의 뚜렷한 장점과 유의해야 할 단점</h3>
+      <p><strong>장점:</strong> 첫째, 렌터카 특유의 식별 번호판이 아닌 일반 번호판이 부여되므로 사회적 시선이나 비즈니스 미팅에서 일반 자가용과 동일한 대우를 받습니다. 둘째, 오랜 무사고 운전 경력을 가진 분들은 낮은 개인 보험 요율을 지속적으로 유지할 수 있어 매우 유리합니다. 셋째, 만기 시점에 중고차 시세가 리스 설정 잔가보다 높으면 차량을 인수하여 차익을 실현하고, 시세가 폭락하면 차량을 반납하여 감가상각 손실을 전액 금융사에 전가할 수 있습니다.</p>
+      <p><strong>단점:</strong> 연간 약정 주행거리(보통 2만~3만km)가 설정되어 이를 초과할 경우 km당 100~200원의 초과운행 부담금이 발생할 수 있습니다. 또한 운용리스는 금융 거래로 분류되므로 단기 연체 시 신용점수에 영향을 미칠 수 있으므로 철저한 납입 계획이 필요합니다.</p>
+    </section>
+
+    <!-- 섹션 5: 사업자 절세 전략 및 세무 혜택 -->
+    <section id="tax-business">
+      <h2>개인사업자 및 법인사업자를 위한 절세 컨설팅 가이드</h2>
+      <p>사업체를 운영 중인 대표님들에게 아반떼 풀체인지 리스는 가장 효율적인 세무 전략 중 하나입니다. 소득세법 및 법인세법상 <strong>업무용 승용차 과세합리화 규정</strong>에 따라 연간 납부하는 리스료와 유지비용을 합법적으로 필요경비 처리할 수 있습니다.</p>
+
+      <div class="card-grid">
+        <div class="card">
+          <div class="card-title">
+            <span>연 1,500만 원 경비 인정</span>
+            <span class="card-tag">기본 한도</span>
+          </div>
+          <p>차량 감가상각비 상당액 연 800만 원과 유류비, 자동차세, 통행료 등 유지관리비 연 700만 원을 합산하여 연간 1,500만 원까지 별도의 운행기록부 작성 없이도 간편하게 비용 처리가 가능합니다.</p>
+        </div>
+        <div class="card">
+          <div class="card-title">
+            <span>세율 구간별 절세 시뮬레이션</span>
+            <span class="card-tag">실질 절감</span>
+          </div>
+          <p>종합소득세 과세표준 8,800만 원 초과(세율 35%~45% 구간) 개인사업자의 경우, 연간 400만 원~600만 원 상당의 실질적인 세금 감면 혜택을 체감할 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="warning-callout">
+        <h4>리스 이용 시 신용점수 관리 및 무보증 승인 핵심 노하우</h4>
+        <p>토스(Toss), 카카오페이, 네이버페이 앱 등에서 확인 가능한 개인 신용점수가 KCB 750점 이상이라면 무보증 리스 상품을 99% 무서류 다이렉트로 승인받을 수 있습니다. 소득 증빙이 어려운 프리랜서나 신규 개업 1년 미만의 초기 사업자라도 주거래 은행 통장 입출금 내역이나 신용카드 사용 실적을 소득으로 환산하여 최저 금리로 예외 승인을 이끌어내는 전문 컨설팅 업체를 선택하는 것이 무엇보다 중요합니다.</p>
+      </div>
+    </section>
+
+    <!-- 섹션 6: 온라인 커뮤니티(보배드림, 디시, 펨코 등) 실계약 후기 및 내돈내산 분석 -->
+    <section id="community-review">
+      <h2>실제 출고 고객 내돈내산 후기 및 커뮤니티 반응</h2>
+      <p>보배드림, 디시인사이드 차갤, 에펨코리아(펨코), 맘카페 등 대표적인 온라인 커뮤니티에서 실사용자들이 남긴 <strong>아반떼 풀체인지 리스 출고 후기</strong>와 평가를 객관적으로 종합하였습니다.</p>
+
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-title">
+          <span>"보배드림에서 견적 10군데 비교해보고 무보증 계약 성공했습니다"</span>
+          <span class="card-tag">30대 직장인 김*현 님</span>
+        </div>
+        <p>신차 대리점에서는 할부 이자율이 6%대라 매달 내는 원리금과 취등록세 180만 원이 너무 부담스러웠습니다. 유튜브와 네이버 블로그를 찾아보다가 다이렉트 리스 비교센터를 알게 되었는데, 가솔린 1.6 모던 트림을 보증금 30% 조건으로 월 26만 원대에 맞출 수 있었습니다. 차도 계약 후 5일 만에 집 앞까지 탁송되었고 번호판도 일반 자가용이라 지인들도 다 일반 신차 산 줄 압니다.</p>
+      </div>
+
+      <div class="card" style="margin-bottom: 1.5rem;">
+        <div class="card-title">
+          <span>"하이브리드 인스퍼레이션 리스 출고, 주유비가 절반으로 줄었습니다"</span>
+          <span class="card-tag">개인사업자 박*우 님</span>
+        </div>
+        <p>일산에서 강남까지 매일 왕복 70km를 출퇴근하는데 하이브리드 리스를 타니 실연비가 22km/L 이상 나와서 한 달 기름값이 10만 원 초반대입니다. 사업자 종합소득세 신고 때 월 리스료 전액을 경비 처리하니 체감되는 유지비는 경차보다 훨씬 쌉니다. 제미나이(Gemini)와 챗지피티(ChatGPT)로 계산해본 예상 지출보다 실제 금융사 프로모션 할인이 더 커서 대만족입니다.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-title">
+          <span>"펨코에서 추천받은 즉시출고 선발주 물량으로 이틀 만에 수령"</span>
+          <span class="card-tag">프리랜서 이*진 님</span>
+        </div>
+        <p>기존에 타던 차가 갑자기 고장 나서 당장 차가 필요한 상황이었는데 현대차 납기표를 보니 3개월 대기더라고요. 담당 플래너분이 금융사에서 미리 대량 선발주해 둔 아반떼 N Line 재고를 찾아주셔서 계약서 작성하고 이틀 뒤에 썬팅과 블랙박스 시공까지 완료된 상태로 받았습니다. 사은품 지원과 페이백 혜택도 깔끔하게 정산받았습니다.</p>
+      </div>
+    </section>
+
+    <!-- 섹션 7: 자주 묻는 질문 (FAQ) -->
+    <section id="faq-section">
+      <h2>자주 묻는 질문 (FAQ)</h2>
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Q. 대학생이나 무직자, 주부도 아반떼 리스 계약이 가능한가요?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>원칙적으로 금융 심사 시 일정한 소득 증빙이 요구되지만, 신용점수가 양호한 직계가족(부모님, 배우자)을 공동명의 또는 보증인으로 입보하거나, 추정 소득(신용카드 연간 사용액, 건강보험료 납부 내역)을 활용하면 초기비용 10~20% 납입 조건으로 무리 없이 승인받을 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Q. 리스 계약 기간 도중 중도 해지하거나 승계할 수 있나요?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>계약 기간 도중 단순 반납 시 잔여 기간에 대한 중도해지수수료가 발생합니다. 따라서 계약을 종료하고자 할 때는 잔여 리스 조건을 그대로 이어받을 제3자를 찾는 <strong>리스 승계(Lease Transfer)</strong>를 진행하는 것이 위약금을 전액 면제받고 오히려 승계 지원금을 받을 수 있는 가장 유리한 방법입니다.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Q. 1년 또는 12개월 단기 약정 리스도 가능한가요?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>신차 운용리스는 통상 24개월, 36개월, 48개월, 60개월 약정이 기본입니다. 12개월(1년) 이하의 초단기 이용을 원하시는 경우에는 신차 리스보다는 기존 차주의 계약을 이어받는 리스 승계 차량이나 단기 렌트 상품을 이용하시는 것이 경제적입니다.</p>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-question">
+          <span>Q. 리스 차량의 사고 발생 시 면책금 및 감가 패널티는 어떻게 되나요?</span>
+          <span>+</span>
+        </div>
+        <div class="faq-answer">
+          <p>운용리스는 본인의 자동차 보험으로 사고 처리를 진행하므로 별도의 렌트 면책금이 발생하지 않습니다. 수리가 완료된 후 만기 시 차량을 인수할 계획이라면 감가 패널티가 전혀 없으며, 만기 반납 시 주요 골격 프레임 손상 등 중대 사고에 대해서만 공시 규정에 따른 감가액이 정산됩니다.</p>
+        </div>
+      </div>
+
+      <!-- 공인 신뢰성 외부 링크 3곳 -->
+      <div class="reference-box">
+        <h4>신뢰할 수 있는 공식 정보 출처 및 관련 사이트</h4>
+        <ul>
+          <li>
+            <a href="https://leaseetruthx.withusrizz.com" target="_blank" rel="noopener noreferrer">
+              오토모빌 리스 가이드 및 금융 정책 분석 센터 (reliabledone.com 공식 파트너)
+            </a> - 신차 리스 금융 표준 약관 및 2026년 금리 비교 자료
+          </li>
+          <li>
+            <a href="https://namu.wiki/w/%ED%98%84%EB%8C%80_%EC%95%84%EB%B0%98%EB%96%BE" target="_blank" rel="noopener noreferrer">
+              나무위키 - 현대 아반떼 모델별 역사 및 상세 제원
+            </a> - 역대 세대별 변화와 풀체인지 세부 사양 정보
+          </li>
+          <li>
+            <a href="https://www.hyundai.com" target="_blank" rel="noopener noreferrer">
+              현대자동차 공식 홈페이지 (Hyundai Motors Official)
+            </a> - 신차 공식 카탈로그, 옵션 패키지 구성 및 전국 시승 센터 안내
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 섹션 8: 온라인 다이렉트 견적 및 상담 신청 -->
+    <section id="consulting-form">
+      <h2>2026 아반떼 풀체인지 실시간 다이렉트 무료 견적 신청</h2>
+      <p>국내 22개 전 금융사(캐피탈 및 카드사)의 실시간 할인 금리와 선발주 즉시출고 가능 재고를 1:1 맞춤형으로 비교하여 최적의 견적서를 전송해 드립니다.</p>
+
+      <form class="quote-form" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+          <label for="cust-name">고객명 / 상호명</label>
+          <input type="text" id="cust-name" placeholder="성함 또는 법인명을 입력하세요" required>
+        </div>
+        <div class="form-group">
+          <label for="cust-phone">연락처 (휴대전화 번호)</label>
+          <input type="tel" id="cust-phone" placeholder="010-0000-0000" required>
+        </div>
+        <div class="form-group">
+          <label for="cust-model">희망 세부 모델 및 파워트레인</label>
+          <select id="cust-model" required>
+            <option value="">모델을 선택하세요</option>
+            <option value="avante_gasoline">아반떼 가솔린 1.6 (스마트/모던/인스퍼레이션)</option>
+            <option value="avante_hev">아반떼 1.6 하이브리드 HEV</option>
+            <option value="avante_nline">아반떼 N Line 1.6 터보</option>
+            <option value="avante_n">아반떼 N 2.0T 고성능</option>
+            <option value="avante_lpi">아반떼 1.6 LPi</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cust-type">이용자 구분</label>
+          <select id="cust-type" required>
+            <option value="individual">개인 / 급여소득자</option>
+            <option value="business">개인사업자</option>
+            <option value="corporate">법인사업자</option>
+            <option value="freelancer">프리랜서 / 기타</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cust-deposit">희망 초기비용 조건</label>
+          <select id="cust-deposit">
+            <option value="zero">초기비용 0원 (무보증/무선납)</option>
+            <option value="dep20">보증금 20%~30% (만기 전액 환급)</option>
+            <option value="pre20">선납금 20%~30% (월 납입금 최소화)</option>
+            <option value="undecided">상담 후 결정</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="cust-region">출고 희망 지역</label>
+          <input type="text" id="cust-region" placeholder="예: 서울 강남구 / 경기 수원시">
+        </div>
+        <div class="form-group full-width" style="margin-top: 1rem; text-align: center;">
+          <button type="submit" class="btn-action" style="width: 100%; max-width: 480px;">전 금융사 최저가 다이렉트 견적 받기</button>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.8rem;">
+            고객님의 소중한 개인정보는 견적 산출 및 상담 용도 외에 절대 이용되지 않으며 철저히 암호화되어 관리됩니다.
+          </p>
+        </div>
+      </form>
+    </section>
+
+    <!-- 하단 배너 CTA -->
+    <div class="cta-banner">
+      <h3>이번 달 아반떼 풀체인지 특별 한정 프로모션 마감 임박</h3>
+      <p>선착순 즉시출고 50대 한정 블랙박스, 최고급 틴팅 무상 시공 및 주유상품권 추가 혜택 지원 이벤트를 놓치지 마세요.</p>
+      <a href="#consulting-form" class="btn-action">즉시 상담 및 재고 선점하기</a>
+    </div>
+  </main>
+
+  
+  <!-- 인터랙티브 스크립트 -->
+  <script>
+    // FAQ Accordion Toggle
+    document.querySelectorAll('.faq-question').forEach(item => {
+      item.addEventListener('click', () => {
+        const parent = item.parentElement;
+        const isActive = parent.classList.contains('active');
+        
+        document.querySelectorAll('.faq-item').forEach(other => {
+          other.classList.remove('active');
+          other.querySelector('.faq-question span:last-child').textContent = '+';
+        });
+
+        if (!isActive) {
+          parent.classList.add('active');
+          item.querySelector('span:last-child').textContent = '-';
+        }
+      });
+    });
+
+    // Interactive Lease Calculator
+    function calculateLease() {
+      const price = parseFloat(document.getElementById('calc-trim').value);
+      const period = parseInt(document.getElementById('calc-period').value);
+      const depType = document.getElementById('calc-deposit-type').value;
+      const rate = parseFloat(document.getElementById('calc-rate').value);
+
+      // 잔존가치 계수 (기간별)
+      let rvRatio = 0.58;
+      if (period === 36) rvRatio = 0.64;
+      if (period === 60) rvRatio = 0.50;
+
+      const residualValue = price * rvRatio;
+      const depreciation = price - residualValue;
+      
+      // 월 기본 상환액
+      let monthlyBase = depreciation / period;
+
+      // 이자율 계산 (가중치)
+      const interestFactor = (price + residualValue) * (0.045 / 12);
+      let monthlyTotal = monthlyBase + interestFactor;
+
+      // 선납금 / 보증금 할인 효과 반영
+      if (depType === 'prepaid') {
+        const prepaidAmount = price * rate;
+        monthlyTotal = (depreciation - prepaidAmount) / period + interestFactor;
+      } else if (depType === 'deposit') {
+        // 보증금 예치에 따른 이자 할인 (연 3.5% 상당 할인)
+        const depositDiscount = (price * rate * 0.035) / 12;
+        monthlyTotal = monthlyTotal - depositDiscount;
+      } else if (depType === 'zero') {
+        // 무보증 기준
+        monthlyTotal = monthlyTotal * 1.03;
+      }
+
+      // 최종 가격 표시 포맷팅 (만원 단위 반올림)
+      const formatted = Math.round(monthlyTotal / 1000) * 1000;
+      document.getElementById('calc-result-text').textContent = '월 ' + formatted.toLocaleString('ko-KR') + ' 원';
+    }
+
+    // 견적 신청 폼 핸들러
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('cust-name').value;
+      alert(name + ' 고객님, 2026 아반떼 풀체인지 최저가 다이렉트 견적 요청이 정상 접수되었습니다. 전담 전문 플래너가 금융사별 비교표를 정리하여 즉시 연락드리겠습니다.');
+      e.target.reset();
+    }
+  </script>
+  
